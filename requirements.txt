@@ -1,0 +1,3 @@
+download rasa 
+then rasa init in the folder 
+pip install flask
