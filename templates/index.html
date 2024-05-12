@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Business Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            background-color: #f5f5f5;
+            animation: fade-in 1s ease-in-out;
+        }
+        form {
+            width: 100%;
+            padding: 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+       
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease-in-out;
+        }
+        input[type="text"]:focus, textarea:focus {
+            border-color: #4CAF50;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Business Information</h1>
+    <form id="businessInfo" method="POST" action="/business-info">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="businessName">Business Name:</label>
+        <input type="text" id="businessName" name="businessName" required>
+        
+        <label for="greeting">What Do You Want The Initial Greeting::</label>
+        <input type="text" id="greeting" name="greeting" required>
+
+        <label for="businessDescription">Brief Description of Your Business:</label>
+        <textarea id="businessDescription" name="businessDescription" rows="4" cols="50" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
